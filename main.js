@@ -1,9 +1,12 @@
+// SQL = Structured Query Language
+// NOSQL = uhh... not Structured Query Language
+
 // Use database/ create and use database
-// > use databaseName
+> use databaseName
 
 // Show databases
 // New database will not populate until data added. (users != data)
-// > show dbs
+> show dbs
 
 // Create user
 db.createUser({
@@ -29,26 +32,44 @@ db.createUser({
 })
 
 // Show Users
-// > db.getUsers()
+> db.getUsers()
 
 // Delete user
-// > db.dropUser('user')
+> db.dropUser('user')
 
 // Create a collection
-// > db.createCollection('collectionName')
+> db.createCollection('collectionName')
 
 // Show collections
-// > show collections
+> show collections
 
 // Add documents into a collection
-// > db.collection.insert({
-// >   'key': 'value'
-// >})
+> db.collection.insert({
+>   'key': 'value'
+> })
 
-db.books.insert({
-    "name": "Harry Potter 1",
-    "publishedDate": new Date(),
-    "authors": [
-      {"name": "JK Rowling"},
-    ]
-  })
+// add many items to collection
+// 
+db.books.insertMany([
+    {
+        'name': 'Confident Ruby',
+        'publishedDate': new Date(),
+        'authors': [
+            { 'name': 'Avdi Grimm' }
+        ]
+    },
+    {
+        'name': 'Angels & Demons',
+        'publishedDate': new Date(),
+        'authors': [
+            { 'name': 'Dan Brown'}
+        ]
+    },
+    {
+      "name": "Blink",
+      "publishedDate": new Date(),
+      "authors": [
+        {"name": "Malcolm Gladwell"}
+      ]
+    }
+])
