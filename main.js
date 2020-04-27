@@ -33,3 +33,22 @@ db.createUser({
 
 // Delete user
 // > db.dropUser('user')
+
+// Create a collection
+// > db.createCollection('collectionName')
+
+// Show collections
+// > show collections
+
+// Add documents into a collection
+// > db.collection.insert({
+// >   'key': 'value'
+// >})
+
+db.books.insert({
+    "name": "Harry Potter 1",
+    "publishedDate": new Date(),
+    "authors": [
+      {"name": "JK Rowling"},
+    ]
+  })
