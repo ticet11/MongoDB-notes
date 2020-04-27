@@ -74,7 +74,10 @@ db.books.insertMany([
     }
 ])
 
-// Query for all collections
+// Query for all items
 > db.collectionName.find()
 // Easier to read version
 > db.collectionName.find().pretty()
+
+// Query for specific item in collection
+> db.collectionName.find( {name: "itemName"} ).pretty()
