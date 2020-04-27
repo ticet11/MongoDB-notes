@@ -73,3 +73,8 @@ db.books.insertMany([
       ]
     }
 ])
+
+// Query for all collections
+> db.collectionName.find()
+// Easier to read version
+> db.collectionName.find().pretty()
